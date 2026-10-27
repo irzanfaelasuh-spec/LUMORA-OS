@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:allowBackup="false" android:label="Lumora OS" android:icon="@drawable/lumora_icon" android:theme="@style/Theme.Lumora" android:usesCleartextTraffic="false">
+        <activity android:name="com.lumora.os.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
