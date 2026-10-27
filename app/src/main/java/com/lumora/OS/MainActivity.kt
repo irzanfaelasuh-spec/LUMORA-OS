@@ -3,10 +3,7 @@ package com.lumora.os
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.*
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.*
@@ -117,7 +114,7 @@ private fun LumoraApp() {
                             DesktopShortcut("System Info", Icons.Default.Memory) { openApp = "System Info"; minimized = false }
                         }
                         if (openApp != null && !minimized) {
-                            AnimatedVisibility(visible = true, enter = fadeIn(), exit = fadeOut(), modifier = Modifier.align(Alignment.Center)) {
+                            Box(Modifier.align(Alignment.Center)) {
                                 AppWindow(
                                     title = openApp!!,
                                     dark = dark,
